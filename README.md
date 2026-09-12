@@ -22,6 +22,10 @@ A simple web-based task management application designed to help students organiz
 
 ## Project Structure
 
+## GitHub Repository
+
+https://github.com/Madeeha-Tazeen/Task_Manager
+
 ```text
 Student-Task-Manager/
 │
@@ -66,5 +70,5 @@ Purpose of the Project
 The main purpose of this project is to build a basic student task management application while gaining practical experience with Git version control, branching, merging, and conflict resolution.
 
 Author
-
 Madeeha Tazeen
+
