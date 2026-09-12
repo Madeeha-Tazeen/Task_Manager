@@ -20,11 +20,19 @@ A simple web-based task management application designed to help students organiz
 - Git
 - GitHub
 
-## Project Structure
+ ## Setup Instructions
+
+1. Clone this repository to your computer.
+2. Open the project folder in Visual Studio Code.
+3. Open the `index.html` file in a web browser.
+4. The Student Task Manager is ready to use.
+
 
 ## GitHub Repository
 
 https://github.com/Madeeha-Tazeen/Task_Manager
+
+## Project Structure
 
 ```text
 Student-Task-Manager/
