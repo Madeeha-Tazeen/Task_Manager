@@ -62,8 +62,13 @@ function displayTasks() {
   });
   const totalTasks = tasks.length;
 
-  console.log("Total tasks:", totalTasks);
-}
+console.log("Total tasks:", totalTasks);
+
+const completedTasks = tasks.filter(function(task) {
+    return task.completed;
+}).length;
+
+console.log("Completed tasks:", completedTasks);
 
 function completeTask(id) {
   const task = tasks.find(function (task) {
