@@ -64,6 +64,11 @@ function displayTasks() {
 
         taskList.appendChild(li);
     });
+    const completedTasks = tasks.filter(function(task) {
+    return task.completed;
+}).length;
+
+console.log("Completed tasks:", completedTasks);
 }
 
 function completeTask(id) {
