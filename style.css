@@ -37,3 +37,44 @@ h1 {
 p {
     color: #666;
 }
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.task-input input {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+.task-input button {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #222;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.task-input button:hover {
+    opacity: 0.85;
+}
+
+#taskList {
+    list-style: none;
+    margin-top: 20px;
+}
