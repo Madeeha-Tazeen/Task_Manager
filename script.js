@@ -1,48 +1,44 @@
 let tasks = [];
 
 function addTask() {
+  const input = document.getElementById("taskInput");
 
-    const input = document.getElementById("taskInput");
+  const taskText = input.value.trim();
 
-    const taskText = input.value.trim();
+  if (taskText === "") {
+    alert("Please enter a task.");
 
-    if (taskText === "") {
+    return;
+  }
 
-        alert("Please enter a task.");
+  const task = {
+    id: Date.now(),
+    text: taskText,
+    completed: false,
+  };
 
-        return;
-    }
+  tasks.push(task);
 
-    const task = {
-        id: Date.now(),
-        text: taskText,
-        completed: false
-    };
+  input.value = "";
 
-    tasks.push(task);
-
-    input.value = "";
-
-    displayTasks();
+  displayTasks();
 }
 
 function displayTasks() {
+  const taskList = document.getElementById("taskList");
 
-    const taskList = document.getElementById("taskList");
+  taskList.innerHTML = "";
 
-    taskList.innerHTML = "";
+  tasks.forEach(function (task) {
+    const li = document.createElement("li");
 
-    tasks.forEach(function(task) {
+    li.className = "task-item";
 
-        const li = document.createElement("li");
+    if (task.completed) {
+      li.classList.add("completed");
+    }
 
-        li.className = "task-item";
-
-        if (task.completed) {
-            li.classList.add("completed");
-        }
-
-        li.innerHTML = `
+    li.innerHTML = `
             <span>${task.text}</span>
 
             <div class="task-actions">
@@ -62,28 +58,29 @@ function displayTasks() {
             </div>
         `;
 
-        taskList.appendChild(li);
-    });
+    taskList.appendChild(li);
+  });
+  const totalTasks = tasks.length;
+
+  console.log("Total tasks:", totalTasks);
 }
 
 function completeTask(id) {
+  const task = tasks.find(function (task) {
+    return task.id === id;
+  });
 
-    const task = tasks.find(function(task) {
-        return task.id === id;
-    });
+  if (task) {
+    task.completed = !task.completed;
+  }
 
-    if (task) {
-        task.completed = !task.completed;
-    }
-
-    displayTasks();
+  displayTasks();
 }
 
 function deleteTask(id) {
+  tasks = tasks.filter(function (task) {
+    return task.id !== id;
+  });
 
-    tasks = tasks.filter(function(task) {
-        return task.id !== id;
-    });
-
-    displayTasks();
+  displayTasks();
 }
