@@ -69,7 +69,7 @@ const completedTasks = tasks.filter(function(task) {
 }).length;
 
 console.log("Completed tasks:", completedTasks);
-
+}
 function completeTask(id) {
   const task = tasks.find(function (task) {
     return task.id === id;
