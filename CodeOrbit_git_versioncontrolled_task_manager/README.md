@@ -87,6 +87,8 @@ The project development was divided into multiple feature branches:
 
 The main purpose of this project is to build a basic student task management application while gaining practical experience with Git, GitHub, branching, merging, and conflict resolution.
 
-##
+##👩‍💻 Author
+
+Madeeha Tazeen
 
 
